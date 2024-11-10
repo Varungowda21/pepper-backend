@@ -8,7 +8,6 @@ formCtrl.createForm = async (req, res) => {
     await newForm.save();
     res.json(newForm);
   } catch (err) {
-    console.error("Error creating form:", err.message); // Log the error for debugging
     res.status(500).json({ error: "something went wrong" });
   }
 };
